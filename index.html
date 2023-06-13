@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cardapio</title>
+
+</head>
+
+<body>
+
+    <p class="paragrafo">Insira o Produto que deseja saber o Preço <br/>
+        OBS(Só temos os produtos do cardapio)
+    </p>
+
+    <input class="caixa_de_mensagem" />
+    <button class="botao">Preço</button>
+
+    <script>
+        const comidas = ["Hamburguer", "Coxinha", "Pastel", "Empada"];
+        const preco = [20, 8, 10, 8];
+
+        const comidasEpreco = [comidas, preco];
+
+        function cardapio(prato) {
+            if (comidasEpreco[0].includes(prato)) {
+                const [comidas, preco] = comidasEpreco;
+                const i = comidas.indexOf(prato);
+                const precoDoPrato = preco[i];
+                return precoDoPrato;
+            } else {
+                return null;
+            }
+        }
+
+        var button = document.querySelector("button");
+
+        function verifica() {
+            var input = document.querySelector("input");
+            var prato = input.value;
+            var precoDoPrato = cardapio(prato);
+
+            if (precoDoPrato !== null) {
+                alert(`O valor é ${precoDoPrato}`);
+            } else {
+                alert("Não temos no cardápio");
+            }
+        }
+
+        button.onclick = verifica;
+    </script>
+</body>
+</html>

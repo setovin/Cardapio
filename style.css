@@ -1,0 +1,32 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 10%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://cdn.discordapp.com/attachments/1104579118252707870/1117968827800637571/cardapio_de_salgados_para_lanchonete.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.caixa_de_mensagem {
+    width: 15%;
+    display: flex; justify-content: space-evenly;
+    margin: 1%;
+}
+
+.botao {
+    width: 5%;
+    background-color: yellow;
+    color: black;
+    font-size: 150%;
+}
+
+.paragrafo {
+    color: red;
+    font-size: 120%;
+}
